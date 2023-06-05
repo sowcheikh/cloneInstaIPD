@@ -10,15 +10,15 @@
       />
     </div>
     <div class="col-md-9">
-      <ul style="margin-left: 12px" class="pl-1 mt-1 list-unstyled">
+      <ul class="pl-1 mt-1 list-unstyled">
         <li>
           <p class="ml-3 text-dark mb-0 mt-1">
-            <strong>bill_the_program_js</strong>
+            <strong>Fatima fashion</strong>
           </p>
         </li>
         <li>
           <span class="ml-3 text-dark">
-            bill_do
+            commerçante
           </span>
         </li>
       </ul>
@@ -26,35 +26,35 @@
   </div>
   <!-- Suggestion -->
   <div>
-    <small>Suggestion for you</small>
-    <span style="float: right">See All</span>
+    <small class="text-dark">Suggestion pour vous</small>
+    <span style="float: right">Voir tout</span>
   </div>
   <!-- Suggested user -->
-  <div class="row">
-    <div class="col-md-2">
+  <div class="row" *ngFor="let sug of suggestions">
+    <div class="col-md-2" >
       <img
-        src="assets/images/userdata/elna_stha_photo1.jpg"
+        src="{{sug.image}}"
         class="rounded-circle mt-2"
         height="40"
         alt="Avatar"
       />
     </div>
     <div class="col-md-8">
-      <ul style="margin-left: 12px" class="ml-0 pl-1 mt-1 list-unstyled">
+      <ul class="ml-0 pl-1 mt-1 list-unstyled">
         <li>
           <small class="user-name">
-            <strong>bill_the_programmer.js</strong>
+            <strong>{{sug.name}}</strong>
           </small>
         </li>
         <li>
           <span class="user-name">
-            Follow by John_1 + 10 more
+            Suivi(e) par {{sug.suivi_par}} + {{sug.nbrSuivi}} autres...
           </span>
         </li>
       </ul>
     </div>
     <div class="col-md-2">
-      <p class="user-name mt-4 text-primary">Follow</p>
+      <a href="" class="user-name mt-4 text-primary">Suivre</a>
     </div>
   </div>
 </section>

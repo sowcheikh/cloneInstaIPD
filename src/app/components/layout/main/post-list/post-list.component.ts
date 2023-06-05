@@ -45,4 +45,7 @@ export class PostListComponent {
     }
   ]
 
+  likePost() {
+    console.log('like it')
+  }
 }
