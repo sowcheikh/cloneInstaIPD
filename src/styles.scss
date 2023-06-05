@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+// story
+#story {
+  background-color: white;
+  margin: auto;
+  border: 1px solid #dbdbdb;
+  height: 110px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.story {
+  border-radius: 50%;
+}
+.story-container ul {
+  list-style-type: none;
+  display: flex;
+  overflow-y: auto;
+  padding: 20px;
+}
+.story-container ul li {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.story-container ul li .story {
+  padding: 2px;
+  background: linear-gradient(
+      45deg,
+      #F09433 0%,
+      #E6683C 25%,
+      #CC2366 75%,
+      #F09433 100%
+  );
+}
+

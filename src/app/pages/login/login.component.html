@@ -1,0 +1,61 @@
+<section class="vh-100">
+  <div class="container py-5">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <img src="assets/images/login_insta1_small.jpg" style="height: 500px"
+             class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-4">
+        <div class="card p-5 border">
+          <div class="text-center">
+            <img width="103" class="img-fluid" src="assets/images/instagram.png" alt="logo">
+          </div>
+          <div class="row">
+            <div class="col">
+              <div *ngIf="isAuthenticate" class="alert alert-danger">{{message}}</div>
+            </div>
+          </div>
+          <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="login" class="form-control form-control-lg border"
+                     ngModel required name="login" #login="ngModel"/>
+              <label class="form-label" for="login">Identifiant</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="password" class="form-control form-control-lg border"
+                     name="password" required ngModel #password="ngModel"/>
+              <label class="form-label" for="password">Mot de passe</label>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-md btn-block">Se connecter</button>
+
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0 text-muted">OU</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+              <a class="text-primary" href="#!"
+                 role="button">
+                <i class="fab fa-facebook-square me-2"></i>Se connecter avec Facebook
+              </a>
+              </div>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+              <a href="#!"><small>Mot de passe oublié ?</small></a>
+            </div>
+
+          </form>
+        </div>
+        <div class="card py-2 my-2 border">
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Vous n'avez pas de compte ? <a class="text-primary" href="#!">Inscrivez-vous</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</section>

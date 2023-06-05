@@ -1,0 +1,111 @@
+<section class="newsfeed my-5">
+  <div class="post" *ngFor="let post of posts">
+    <div class="card">
+      <div class="card-body">
+        <div class="contain">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="d-flex story">
+                <img
+                  src="{{post.image}}"
+                  class="rounded-circle"
+                  height="40"
+                  alt="Avatar"
+                />
+                <div class="mt-2 mx-1">
+                  <a href="" class="text-dark">
+                    <strong class="mt-5 ml-2">{{post.pseudo}}</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-ellipsis-h fa-lf mt-2 "></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- photo -->
+      <div
+        class="bg-image hover-overlay ripple shadow-1-strong rounded-0"
+        data-mdb-ripple-color="light"
+      >
+        <img src="{{post.image_post}}" class="w-100"/>
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+        </a>
+      </div>
+      <!--  Interaction  -->
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <i class="far fa-heart fa-lg ml-0"></i>
+              <i class="far fa-comment fa-lg mx-2"></i>
+              <i class="far fa-paper-plane fa-lg"></i>
+            </div>
+            <div class="col-md-4">
+              <i class="far fa-bookmark fa-lg"></i>
+            </div>
+          </div>
+          <!--- liked by -->
+          <div class="row mt-1">
+            <div class="col-md-8 mt-1">
+              <img
+                src="{{post.image}}"
+                class="rounded-circle"
+                height="20"
+                alt="Avatar"
+              />
+              <small>
+                liked by <strong>jean</strong> and
+                <strong>500,675</strong>
+                others
+              </small>
+            </div>
+          </div>
+          <!-- description -->
+          <div class="row">
+            <div class="col-md-12 mt-1">
+              <p>
+                <strong class="text-dark">julia</strong>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s ... <small class="my-1">more</small>
+              </p>
+            </div>
+          </div>
+          <!-- comment -->
+          <div class="row">
+            <small class="my-1">Views all 2167 comments</small>
+            <p class="mb-O">
+              <strong class="text-dark">
+              phillip_123
+              </strong>lorem ipsum dolor,
+            </p>
+            <p>
+              <strong class="text-dark">
+                jeanette_12
+              </strong>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </p>
+            <small class="my-1">22 hours ago</small>
+          </div>
+          <!-- comment form -->
+          <div class="row mt-2">
+            <hr>
+            <div class="col-md-10">
+              <mdb-form-control>
+                <input mdbInput type="text" id="form1" class="form-control"
+                placeholder="leave a comment"/>
+              </mdb-form-control>
+            </div>
+            <div class="col-md-2">
+              <p class="text-info mt-1">Post</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

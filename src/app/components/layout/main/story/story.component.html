@@ -1,0 +1,15 @@
+<section class="story-container" id="story">
+<ul>
+  <li *ngFor="let st of story">
+    <div class="story">
+      <img
+        src="{{st.image}}"
+        class="rounded-circle"
+        height="50"
+        alt="Avatar"
+      />
+    </div>
+    <span>{{st.pseudo}}</span>
+  </li>
+</ul>
+</section>
