@@ -1,6 +1,6 @@
 <section class="story-container" id="story">
 <ul>
-  <li *ngFor="let st of story">
+  <li *ngFor="let st of stories" (click)="openPopup(st)">
     <div class="story">
       <img
         src="{{st.image}}"
@@ -13,3 +13,10 @@
   </li>
 </ul>
 </section>
+<div class="popup" *ngIf="popupOpen">
+  <div class="popup-content">
+    <img [src]="selectedStory?.image" alt="Story" width="200" height="200">
+    <span class="username">{{ selectedStory?.username }}</span>
+    <button class=" btn btn-dark close-button" (click)="closePopup()"><i class="far fa-circle-xmark"></i></button>
+  </div>
+</div>

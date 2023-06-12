@@ -35,6 +35,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import {HttpClientModule} from "@angular/common/http";
+import { StoryIconComponent } from './components/layout/main/story/story-icon/story-icon.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProfileComponent,
     NotFoundComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    StoryIconComponent
   ],
   imports: [
     BrowserModule,
