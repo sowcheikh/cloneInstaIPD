@@ -34,6 +34,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
